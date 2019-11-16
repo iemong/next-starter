@@ -6,6 +6,6 @@ const Home = () => <Title>Hello, world!</Title>
 export default Home
 
 const Title = styled.h1`
-  font-size: 20px;
-  color: red;
+    font-size: 20px;
+    color: red;
 `

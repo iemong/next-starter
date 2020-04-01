@@ -111,18 +111,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
-const Home = () => __jsx(Title, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, "Hello, world!");
+const Home = () => {
+  react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
+    if ('hasStorageAccess' in document) {
+      const promise = document.hasStorageAccess();
+      promise.then(hasAccess => {
+        console.log(hasAccess);
+      }, reason => {
+        console.log(reason);
+      });
+    }
+  }, []);
+  return __jsx(Title, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, "Hello, world!");
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 const Title = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.h1`
-  font-size: 20px;
-  color: red;
+    font-size: 20px;
+    color: red;
 `;
 
 /***/ }),
